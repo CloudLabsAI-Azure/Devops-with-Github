@@ -3,11 +3,7 @@ Param (
     [string]
     $vmAdminUsername,
 
-    [string]
-    $trainerUserName,
-
-    [string]
-    $trainerUserPassword
+   
 
 )
 
@@ -18,18 +14,12 @@ $adminUsername = "demouser"
 [System.Environment]::SetEnvironmentVariable('DeploymentID', $DeploymentID,[System.EnvironmentVariableTarget]::Machine)
 
 
-#Import Common Functions
-$path = pwd
-$path=$path.Path
-$commonscriptpath = "$path" + "\cloudlabs-common\cloudlabs-windows-functions.ps1"
-. $commonscriptpath
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
-# Run Imported functions from cloudlabs-windows-functions.ps1
-WindowsServerCommon
+Sleep 10
+refreshenv
 
-
-InstallChocolatey
-InstallVSCode
+choco install vscode
 choco install dotnetcore-sdk
 choco install azure-functions-core-tools
 InstallAzCLI
