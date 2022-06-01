@@ -2,18 +2,11 @@
   "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
-    "AzureUserName": {
-      "type": "string"
-    },
-    "AzurePassword": {
-      "type": "securestring"
-    },
+  
     "DeploymentID": {
       "type": "string"
     },
-    "ODLID": {
-      "type": "string"
-    },
+  
     "diskStorageType": {
       "defaultValue": "Standard_LRS",
       "allowedValues": [
@@ -27,29 +20,11 @@
     },
     "vmAdminPassword": {
       "type": "SecureString"
-    },
-    "InstallCloudLabsShadow": {
-      "type": "string",
-      "defaultValue": "yes",
-      "allowedValues": [
-        "yes",
-        "no"
-      ]
-    },
-
-    "azuserobjectid": {
-      "type": "string"
-    },
-    "trainerUserName": {
-      "type": "string"
-    },
-    "trainerUserPassword": {
-      "type": "string"
     }
+   
   },
   "variables": {
     "cloudlabsCommon": "[concat(' -AzureUserName ', parameters('AzureUserName'), ' -AzurePassword ', parameters('AzurePassword'), ' -AzureTenantID ', variables('AzureTenantID'), ' -AzureSubscriptionID ', variables('AzureSubscriptionID'), ' -ODLID ', parameters('ODLID'), ' -DeploymentID ', parameters('DeploymentID'),' -azuserobjectid ', parameters('azuserobjectid'),' -InstallCloudLabsShadow ', parameters('InstallCloudLabsShadow'))]",
-    "Enable-CloudLabsEmbeddedShadow": "[concat(' -vmAdminUsername ', parameters('vmAdminUsername'), ' -trainerUserName ', parameters('trainerUserName'), ' -trainerUserPassword ', parameters('trainerUserPassword'))]",
     "AzureSubscriptionID": "[subscription().subscriptionId]",
     "AzureTenantID": "[subscription().tenantId]",
     "location": "[resourceGroup().location]",
@@ -219,12 +194,11 @@
             "autoUpgradeMinorVersion": true,
             "settings": {
               "fileUris": [
-                "https://experienceazure.blob.core.windows.net/templates/cloudlabs-common/cloudlabs-windows-functions.ps1",
-                "https://experienceazure.blob.core.windows.net/templates/mcw-continuous-delivery-in-azure-devops/devops-with-github-customised/psscript.ps1"
-              ]
+                "https://raw.githubusercontent.com/CloudLabsAI-Azure/Devops-with-Github/main/template/psscript.ps1",
+                   ]
             },
             "protectedSettings": {
-              "commandToExecute": "[concat('powershell.exe -ExecutionPolicy ByPass -File mcw-continuous-delivery-in-azure-devops/devops-with-github-customised/psscript.ps1', variables('cloudlabsCommon'), variables('Enable-CloudLabsEmbeddedShadow'))]"
+              "commandToExecute": "[concat('powershell.exe -ExecutionPolicy ByPass -File template/psscript.ps1', variables('cloudlabsCommon'))]"
             }
           }
         }
