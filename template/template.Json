@@ -26,7 +26,7 @@
    
   },
   "variables": {
-    "cloudlabsCommon": "[concat( ' -DeploymentID ', parameters('DeploymentID'))]",
+    "cloudlabsCommon": "[parameters('DeploymentID')]",
     "AzureSubscriptionID": "[subscription().subscriptionId]",
     "AzureTenantID": "[subscription().tenantId]",
     "location": "[resourceGroup().location]",
