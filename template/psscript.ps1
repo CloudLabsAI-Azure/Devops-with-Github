@@ -42,7 +42,7 @@ sleep 5
 
 
 $WebClient = New-Object System.Net.WebClient
-$WebClient.DownloadFile("https://raw.githubusercontent.com/CloudLabsAI-Azure/Devops-with-Github/main/template/logontask.ps1","C:\Packages\logontask.ps1")
+$WebClient.DownloadFile("https://github.com/CloudLabsAI-Azure/Devops-with-Github/blob/main/template/logontask.ps1","C:\Packages\logontask.ps1")
 
 
 
