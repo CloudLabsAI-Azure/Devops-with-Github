@@ -200,8 +200,7 @@
                    ]
             },
             "protectedSettings": {
-              "commandToExecute": "[concat('powershell.exe -ExecutionPolicy ByPass -File psscript.ps1', variables('cloudlabsCommon'))]"
-            }
+              "commandToExecute": "[concat('powershell.exe -ExecutionPolicy ByPass -File psscript.ps1', ' -DeploymentID ', parameters('DeploymentID'))]"            }
           }
         }
       ]
