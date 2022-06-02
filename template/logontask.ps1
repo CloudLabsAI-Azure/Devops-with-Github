@@ -8,7 +8,7 @@ $DeploymentID = $env:DeploymentID
 Start-Process C:\Packages\extensions.bat
 Write-Host "Bypass-Execution-Policy" 
  
-choco install docker-desktop --version=4.7.0
+choco install docker-desktop --version=4.7.0 -y
 Write-Host "Docker-install"
 
 
