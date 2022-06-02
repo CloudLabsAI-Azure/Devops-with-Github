@@ -1,7 +1,7 @@
 Param (
    
     [string]
-    $vmAdminUsername,
+    $deploymentID,
 
    
 
