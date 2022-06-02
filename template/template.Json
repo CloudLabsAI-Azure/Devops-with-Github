@@ -20,7 +20,7 @@
       "Defaultvalue": "demouser"
     },
     "vmAdminPassword": {
-      "type": "SecureString"
+      "type": "SecureString",
       "defaultvalue": "Password.1!!"
     }
    
@@ -196,11 +196,11 @@
             "autoUpgradeMinorVersion": true,
             "settings": {
               "fileUris": [
-                "https://raw.githubusercontent.com/CloudLabsAI-Azure/Devops-with-Github/main/template/psscript.ps1",
+                "https://raw.githubusercontent.com/CloudLabsAI-Azure/Devops-with-Github/main/template/psscript.ps1"
                    ]
             },
             "protectedSettings": {
-              "commandToExecute": "[concat('powershell.exe -ExecutionPolicy ByPass -File template/psscript.ps1', variables('cloudlabsCommon'))]"
+              "commandToExecute": "[concat('powershell.exe -ExecutionPolicy ByPass -File template/psscript.ps1', variables('cloudlabsCommon')]"
             }
           }
         }
