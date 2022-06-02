@@ -13,6 +13,5 @@ A template will be used to save time.
 
   
     [![Button to deploy the Contoso High Availability resource template to Azure.](https://aka.ms/deploytoazurebutton "Deploy the Contoso HA resources to Azure")](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FCloudLabsAI-Azure%2FDevops-with-Github%2Fmain%2Ftemplate%2Ftemplate.Json)
-
-https%3A%2F%2Fraw.githubusercontent.com%2FCloudLabsAI-Azure%2FDevops-with-Github%2Fmain%2Ftemplate%2Ftemplate.Json
-https://raw.githubusercontent.com/microsoft/MCW-Building-a-resilient-IaaS-architecture/master/Hands-on%20lab/Resources/templates/contoso-iaas-ha.json
+    
+        [![Button to deploy the Contoso High Availability resource template to Azure.](https://aka.ms/Labguide "Deploy the Contoso HA resources to Azure")](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FCloudLabsAI-Azure%2FDevops-with-Github%2Fmain%2Ftemplate%2Ftemplate.Json)
