@@ -52,9 +52,6 @@ $WebClient.DownloadFile("https://experienceazure.blob.core.windows.net/templates
 
 
 
-sleep 5
-
-Enable-CloudLabsEmbeddedShadow $vmAdminUsername $trainerUserName $trainerUserPassword
 
 
 #Enable Autologon
@@ -67,7 +64,7 @@ Set-ItemProperty -Path $AutoLogonRegPath -Name "AutoLogonCount" -Value "1" -type
 
 # Scheduled Task to Run PostConfig.ps1 screen on logon
 $Trigger= New-ScheduledTaskTrigger -AtLogOn
-$User= "$($env:ComputerName)\$adminUsername" 
+$User= "$($env:ComputerName)\demouser" 
 $Action= New-ScheduledTaskAction -Execute "C:\Windows\System32\WindowsPowerShell\v1.0\Powershell.exe" -Argument "-executionPolicy Unrestricted -File C:\Packages\logontask.ps1"
 Register-ScheduledTask -TaskName "Installdocker" -Trigger $Trigger -User $User -Action $Action -RunLevel Highest -Force
 
