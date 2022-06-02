@@ -15,7 +15,7 @@ A template will be used to save time.
     [![Button to deploy the Contoso High Availability resource template to Azure.](https://aka.ms/deploytoazurebutton "Deploy the Contoso HA resources to Azure")](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FCloudLabsAI-Azure%2FDevops-with-Github%2Fmain%2Ftemplate%2Ftemplate.Json)
     
        
-[![Open the labguide](https://raw.githubusercontent.com/CloudLabsAI-Azure/Devops-with-Github/main/images/visualizebutton.png)](https://experience.cloudlabs.ai/#/labguidepreview/47b6db5e-d056-4284-9f2b-36867257dd6b "Open the labguide")
+    [![Open the labguide](https://raw.githubusercontent.com/CloudLabsAI-Azure/Devops-with-Github/main/images/visualizebutton.png)](https://experience.cloudlabs.ai/#/labguidepreview/47b6db5e-d056-4284-9f2b-36867257dd6b "Open the labguide")
 
 
 
