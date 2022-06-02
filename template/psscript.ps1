@@ -16,10 +16,10 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 Sleep 10
 refreshenv
 
-choco install vscode
-choco install dotnetcore-sdk
-choco install azure-functions-core-tools
-InstallAzCLI
+choco install vscode -y
+choco install dotnetcore-sdk -y
+choco install azure-functions-core-tools -y
+choco install azure-cli -y
 
 sleep 10
 
@@ -34,9 +34,8 @@ code --install-extension ms-azuretools.vscode-azurefunctions
 sleep  10
 
 #Assign Packages to Install
-choco install vscode
-choco install git
-choco install nodejs.install
+choco install git -y
+choco install nodejs.install -y
 
 sleep 5
 
@@ -61,7 +60,6 @@ $Trigger= New-ScheduledTaskTrigger -AtLogOn
 $User= "$($env:ComputerName)\demouser" 
 $Action= New-ScheduledTaskAction -Execute "C:\Windows\System32\WindowsPowerShell\v1.0\Powershell.exe" -Argument "-executionPolicy Unrestricted -File C:\Packages\logontask.ps1"
 Register-ScheduledTask -TaskName "Installdocker" -Trigger $Trigger -User $User -Action $Action -RunLevel Highest -Force
-
 
 
 
