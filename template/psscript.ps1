@@ -1,10 +1,7 @@
 Param (
    
     [string]
-    $deploymentID
-
-   
-
+    $DeploymentID
 )
 
 Start-Transcript -Path C:\WindowsAzure\Logs\CloudLabsCustomScriptExtension.txt -Append
@@ -43,12 +40,9 @@ choco install nodejs.install
 
 sleep 5
 
-#DownloadFiles
-$WebClient = New-Object System.Net.WebClient
-$WebClient.DownloadFile("https://experienceazure.blob.core.windows.net/templates/innovate-and-modernize-apps-with-data-and-ai/scripts/extensions.bat","C:\Packages\extensions.bat")
 
 $WebClient = New-Object System.Net.WebClient
-$WebClient.DownloadFile("https://experienceazure.blob.core.windows.net/templates/mcw-continuous-delivery-in-azure-devops/devops-with-github-customised/logontask.ps1","C:\Packages\logontask.ps1")
+$WebClient.DownloadFile("https://raw.githubusercontent.com/CloudLabsAI-Azure/Devops-with-Github/main/template/logontask.ps1","C:\Packages\logontask.ps1")
 
 
 
