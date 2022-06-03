@@ -11,7 +11,7 @@ A template will be used to save time.
     
 2. Click on the below **Lab Guide** button to open the labguide.
       
-    [![Open the labguide](Lab Guide)](https://experience.cloudlabs.ai/#/labguidepreview/47b6db5e-d056-4284-9f2b-36867257dd6b "Open the labguide")
+    [![Open the labguide]](https://experience.cloudlabs.ai/#/labguidepreview/47b6db5e-d056-4284-9f2b-36867257dd6b "Open the labguide")
 
 
 
