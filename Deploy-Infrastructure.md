@@ -5,7 +5,9 @@ In this task, you will deploy the required infrastructure for this lab.
 A template will be used to save time.
 
 1.  Select the **Deploy to Azure** button below to open the Azure portal and launch the template deployment for the additional infrastructure components that will be used during the lab. Log in to the Azure portal using your subscription credentials if you are prompted to do so.
-
+  * VM UserName: Enter **demouser**
+  * VM Password: Enter **Password.1!!**
+  * DeploymentID: Enter any unique 6 digit numbers.
   
     [![Button to deploy the Contoso High Availability resource template to Azure.](https://aka.ms/deploytoazurebutton "Deploy the Contoso HA resources to Azure")](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FCloudLabsAI-Azure%2FDevops-with-Github%2Fmain%2Ftemplate%2Ftemplate.Json)
     
