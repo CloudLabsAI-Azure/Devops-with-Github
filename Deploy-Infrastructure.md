@@ -9,7 +9,7 @@ A template will be used to save time.
   
     [![Button to deploy the Contoso High Availability resource template to Azure.](https://aka.ms/deploytoazurebutton "Deploy the Contoso HA resources to Azure")](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FCloudLabsAI-Azure%2FDevops-with-Github%2Fmain%2Ftemplate%2Ftemplate.Json)
     
-2. Click on the below **Lab Guide** button to open the labguide.
+2. Click on the below **Open the Labguide** button to open the labguide.
       
    [Open the labguide](https://experience.cloudlabs.ai/#/labguidepreview/47b6db5e-d056-4284-9f2b-36867257dd6b)
 
