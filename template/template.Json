@@ -17,11 +17,11 @@
     },
     "vmAdminUsername": {
       "type": "string",
-      "defaultValue": "demouser",
+      "defaultValue": "demouser"
     },
     "vmAdminPassword": {
       "type": "SecureString",
-       "defaultValue": "Password.1!!",
+       "defaultValue": "Password.1!!"
     }
    
   },
